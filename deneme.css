@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-image:linear-gradient(to top , transparent, rgba(0,0,0,0.6)),linear-gradient(to bottom , transparent, rgba(0,0,0,0.6)) , url(img/bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.container{
+    width:84% ;
+    margin: auto;
+}
+header{
+    display: flex;
+    align-items: center;
+    height: 11.8rem;
+    justify-content: space-between;
+}
+header .menu{
+    display: flex;
+    align-items: center;
+}
+header .menu ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+header .menu ul li a{
+    font-size: 1.6rem;
+    transition: .5s;
+}
+header .menu ul li a:hover{
+    color: black;
+}
+header .menu .fa-bars {
+    font-size: 1.6rem;
+    padding-top: 2px;
+    margin-left:2rem ;
+    transition: .5s;
+    display: none;
+}
+header .menu .fa-bars:hover{
+    color: black;
+}
+
+.row{
+    height: calc(100vh - 11.8rem);
+    display: flex;
+    align-items: center;
+}
+.row .col{
+    flex-basis: 50%;
+}
+.col-left{
+    padding-right: 2rem;
+}
+.col-left h1{
+    font-size: 10rem;
+}
+.col-left p{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+.btn-1{
+   color: black;
+   font-size: 1.2rem;
+   font-weight: bold;
+   padding: 1.2rem 2.8rem;
+   margin-top: 3rem;
+   border: solid 1px red;
+   border-radius: 2rem;
+   transition: .5s;
+}
+.btn-1:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.col-right{
+    padding-left: 2rem;
+}
+.cards{
+    max-width: 52rem;
+    margin: auto;
+}
+.cards .card{
+    width: 20rem;
+    height: 23rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    display: inline-block;
+    margin: 1.5rem;
+    border: solid 1px red;
+    transition: .5s;
+}
+.cards .card:hover{
+    transform: translateY(-10px);
+    border-color: white;
+}
+.card-1{
+    background-image: url(img/pic-1.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-2{
+    background-image: url(img/pic-2.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-3{
+    background-image: url(img/pic-3.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-4{
+    background-image: url(img/pic-4.png);
+    background-position: center;
+    background-size: cover;
+}
+.cards .card .card-title{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.cards .card .btn-2{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.2rem 2.8rem;
+    margin-top: 3rem;
+    border: solid 1px red;
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 1.5rem;
+    transition: .5s;
+}
+.cards .card .btn-2:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+
+
+@media(max-width:500px){
+    header .menu ul {
+        display:none;
+    }
+    .menu a .fa-bars{
+        display: block;
+    }
+}
+@media(max-width:1150px){
+    .row .col-left{
+        flex-basis: 35%;
+    }
+    .row .col-right{
+        flex-basis: 65%;
+    }
+    .col-left h1{
+        font-size:8rem ;
+    }
+    .col-left p{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:981px){
+    .row{
+        flex-direction: column;
+    }
+    .col-left h1{
+        font-size: 4rem;
+    }
+    .col-right{
+        width: 100%;
+    }
+    .cards .card{
+        margin: .75rem;
+        padding: 1rem;
+    }
+    .card-title p{
+        display: none;
+    }
+}
+@media(max-width:761px){
+    .cards .card{
+        width: 15rem;
+        height: 18rem;
+    }
+}
+@media(max-width:423px){
+    .cards .card{
+        width: 11rem;
+        height: 14rem;
+        margin: .4rem;
+    }
+    .col-left p{
+        font-size:1rem ;
+    }
+    .container{
+        width: 90%;
+    }
+    .col-right{
+        padding-left: 0;
+    }
+}
+@media(max-width:290px){
+    .cards .card{
+        width: 8rem;
+        height: 11rem;
+        margin: .4rem;
+    }
+    .cards .card .btn-2{
+        padding: .3rem .6rem;
+        border-radius: 1.4rem;
+    }
+
+}
